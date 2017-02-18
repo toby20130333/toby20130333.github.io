@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Example Post"
+title:      "JavaScript 发展历程"
 subtitle:   "ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?"
 date:       2015-09-22
 author:     "Hux"
