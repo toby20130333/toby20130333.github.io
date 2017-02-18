@@ -1,4 +1,4 @@
-# TobyYi blog 模板
+# TobyYi blog
 
 ### [我的博客在这里](http://toby20130333.github.io)
 
