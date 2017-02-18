@@ -65,8 +65,7 @@ ga_domain: www.heilqt.com
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "写写代码，玩玩框架，看看产品。世界那么大，多玩玩多看看!"
-sidebar-avatar: img/logo.png      # use absolute URL, seeing it's used in both `/` and `/about/`
-
+sidebar-avatar: /img/logo.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # Featured Tags
