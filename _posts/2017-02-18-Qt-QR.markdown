@@ -8,7 +8,10 @@ header-img: "img/post-bg-2015.jpg"
 tags:
     - QtQuick
     - 情怀
+    - C++
 ---
+
+> “Yeah It's on. ”
 
 ### 二维码解码模块
 二维码解码模块是基于C++组织，依赖开源的QZXing编码项目[qrdecode](https://github.com/SonyPony/QZXing)
