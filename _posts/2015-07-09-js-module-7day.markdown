@@ -1,14 +1,15 @@
 ---
 layout:     keynote
-title:      "Example Post using Keynote Layout"
-subtitle:   "Keynote: JavaScript Modularization Journey"
+title:      "聆听音乐，编写代码"
+subtitle:   "Welcome: My Qt Music World"
 iframe:     "http://music.163.com/outchain/player?type=0&id=604775719&auto=1&height=90"
 date:       2015-07-09
-author:     "Hux"
+author:     "TobyYi"
 header-img: "img/post-bg-js-version.jpg"
 tags:
-    - 前端开发
-    - JavaScript
+    - PC开发
+    - 音乐
+    - QtQuick
 ---
 
 
