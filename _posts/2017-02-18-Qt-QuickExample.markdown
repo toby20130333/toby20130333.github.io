@@ -4,7 +4,7 @@ title:      "基于QtQuick2.0开发的诸多漂亮的界面例子(作为入门�
 subtitle:   " \"QtQuick for Start\""
 date:       2017-02-18
 author:     "Tobyyi"
-header-img: "img/contact-bg.jpg"
+header-img: "http://qtclub.qiniudn.com/contact-bg.jpg"
 tags:
     - QtQuick
     - 情怀
