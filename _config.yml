@@ -1,6 +1,6 @@
 # Site settings
-title: 多多指教
-SEOTitle: 多多指教 | TobyYi Blog
+title: 寒山-居士
+SEOTitle: 寒山-居士 | TobyYi Blog
 header-img: img/hero_home.jpg
 email: tb1210582007@126.com
 description: "Tobyyi-2017"
@@ -14,7 +14,7 @@ baseurl: "/toby20130333.github.io"         # for example, '/blog' if your blog h
 RSS: false
 weibo_username:     Tobyyi
 zhihu_username:     Tobyyi
-github_username:    Tobyyi
+github_username:    toby20130333
 #twitter_username:  huxpro
 facebook_username:  Tobyyi
 

@@ -3,7 +3,7 @@ layout:     post
 title:      "代码高亮"
 subtitle:   "CommonJS，RequireJS，SeaJS 归纳笔记"
 date:       2015-05-25
-author:     "Hux"
+author:     "Tobyyi"
 header-img: "img/post-bg-js-module.jpg"
 tags:
     - 前端开发
