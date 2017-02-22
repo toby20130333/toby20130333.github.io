@@ -4,7 +4,7 @@ title:      "基于QtQuick二维码编码"
 subtitle:   " \"Qt for QR Encode\""
 date:       2017-02-18
 author:     "Tobyyi"
-header-img: "img/contact-bg.jpg"
+header-img: "http://qtclub.qiniudn.com/house.jpeg"
 tags:
     - QtQuick
     - 情怀
