@@ -4,7 +4,7 @@ title:      "基于原生iOS的QtQuick移动平台的网页接入组件"
 subtitle:   " \"Qt for iOSWebView\""
 date:       2017-02-18
 author:     "Tobyyi"
-header-img: "img/post-bg-js-module.jpg"
+header-img: "http://qtclub.qiniudn.com/contact-bg.jpg"
 tags:
     - QtQuick
     - 情怀

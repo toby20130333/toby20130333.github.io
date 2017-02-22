@@ -1,0 +1,83 @@
+---
+layout:     post
+title:      "基于socket.io 0.9.x的客户端的Qt API的封装"
+subtitle:   " \"QtQuick for Start\""
+date:       2017-02-22
+author:     "Tobyyi"
+header-img: "http://qtclub.qiniudn.com/contact-bg.jpg"
+tags:
+    - QtQuick
+    - socket.io
+    - C++
+---
+
+
+> “Yeah It's on. ”
+
+## 基于socket.io 0.9.x的客户端的Qt API的封装
+
+## 有哪些功能？
+
+* 方便使用socket.io进行即时通讯的交互
+* 方便C++与JS进行交互
+* 实现服务端与客户端的socket.io完美结合
+* 弥补了Qt在PC端开发下无法直接使用socket.io的遗憾
+* 修复了源代码的编码问题(utf8)
+
+## QtSocketIo
+
+ =======================
+
+ ### Building the socketio Module(编译socket.io模块)
+
+ * Base on Qt5.3 or later (至少需要Qt5.3 此时Qt版本支持Websocket)
+
+ * Download or git clone the source code.(克隆或者下载该源代码)
+
+ * Put the source code in any directory you like(放置你喜爱的目录)
+
+ * Go to top directory of the project in a terminal and run(使用终端或者cmd命令 cd到项目目录)
+
+ * You should notice add the test/auto/cmake dir(自己新建一个test/auto/cmake目录 目前已经新建好啦)
+
+ * You must set the make evn path(设置环境QtSDK的变量)
+
+ * follow github sourcecode and modified it for me
+
+ * The other build way: Use qtcreator IDE and build it(可以使用qtcreator进行编译)
+
+ *  cmd or terminal:
+
+ ```
+
+     make clean(mingw32-make clean)
+     qmake
+     make(mingw32-make)
+     make install(mingw32-make install)
+
+ ```
+ * make install which can be installed to your QtSDK path(此时可以安装到QtSDK的安装目录的相应位置)
+
+## 有问题反馈
+在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+
+* 邮件(373955953#qq.com, 把#换成@)
+* QQ: 39559539234
+* QQ群:312125701
+* github: [@寒山-居士](https://github.com/toby20130333)
+
+## 感激
+感谢以下的项目,排名不分先后
+
+* [KurtPattyn](https://github.com/KurtPattyn/QtSocketIo)
+
+## 关于作者
+
+```
+  var duoduozhijiao = {
+    nickName  : "寒山-居士",
+    site : "http://www.heilqt.com",
+    blog : "http://blog.heilqt.com"
+  }
+
+```
