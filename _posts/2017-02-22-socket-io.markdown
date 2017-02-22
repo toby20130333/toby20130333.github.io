@@ -4,7 +4,7 @@ title:      "基于socket.io 0.9.x的客户端的Qt API的封装"
 subtitle:   " \"QtQuick for IM\""
 date:       2017-02-22
 author:     "Tobyyi"
-header-img: "http://qtclub.qiniudn.com/contact-bg.jpg"
+header-img: "http://qtclub.qiniudn.com/timg.jpeg"
 tags:
     - QtQuick
     - socket.io
