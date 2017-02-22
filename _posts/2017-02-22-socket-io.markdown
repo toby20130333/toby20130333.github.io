@@ -57,6 +57,7 @@ tags:
 
  ```
  * make install which can be installed to your QtSDK path(此时可以安装到QtSDK的安装目录的相应位置)
+
 ## 模块如何使用
 
 ```
@@ -78,7 +79,7 @@ tags:
 * QQ: 39559539234
 * QQ群:312125701
 * github: [@寒山-居士](https://github.com/toby20130333)
-
+* [源码](https://github.com/toby20130333/DDuiSockeIO)
 ## 感激
 感谢以下的项目,排名不分先后
 
