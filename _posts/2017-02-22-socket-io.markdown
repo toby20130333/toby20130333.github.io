@@ -57,6 +57,19 @@ tags:
 
  ```
  * make install which can be installed to your QtSDK path(此时可以安装到QtSDK的安装目录的相应位置)
+## 模块如何使用
+
+```
+#pro: QT += core gui  websockets  socketio
+
+#C++: 查看封装的API
+
+```
+## 使用效果
+
+![tup1](http://qtclub.qiniudn.com/chat.png)
+
+![图片](http://qtclub.qiniudn.com/Fvr3AObd8A8op-3hYXyxjL36zaQ3)
 
 ## 有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
