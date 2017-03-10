@@ -1,0 +1,107 @@
+---
+layout:     post
+title:      "基于QtQuick和C++的深度交互方式之一"
+subtitle:   " \"QtQuick与C++交互\""
+date:       2017-03-10
+author:     "Tobyyi"
+header-img: "img/post-bg-js-module.jpg"
+tags:
+    - QtQuick
+    - C++
+    - 移动开发
+---
+
+> “Yeah It's on. ”
+
+## QML信号是什么?
+    一个基于Item的组件该有的本能
+    * QML信号传递给C++的槽函数
+```
+    //C++
+    //实例一个QQuickView
+    QQuickView *ddChatView = new QQuickView;
+            ddChatView->setColor(Qt::transparent);
+            ddChatView->resize(QSize(613,569));
+            ddChatView->setMinimumSize(QSize(550,500));
+            ddChatView->setResizeMode(QQuickView::SizeRootObjectToView);
+            ddChatView->setFlags(Qt::FramelessWindowHint|Qt::Window);
+            ddChatView->setSource(QUrl("../qml/ddChat/xxxx.qml"));
+    //该对象为继承QObject的即可 可以使用信号槽就OK
+    QObject *qml_object = ddChatView->rootObject();
+    //signalTabViewChanged为qml当中的该组件的信号 此信号只连接一次
+    connect(qml_object,SIGNAL(signalTabViewChanged(QVariant,QString)),this,SLOT(slotCurTabViewChanged(QVariant,QString)));
+
+    //QML代码
+    Item {
+    id:container
+    width: 613
+    height: 569
+    property variant chatArrId: []
+    property Item chatUI;
+    property int iMargin: 6
+    signal signalRevicSlot(variant tmp);
+    signal signalTabViewChanged(variant info,string iType);//1:delete 2: send msg //3:currentindex changed;
+        Component.onCompleted: {
+            signalTabViewChanged([0,1,2,2],2);
+        }
+    }
+
+```
+## QML槽是什么?
+    一个基于Item的组件可以自定义的普通函数
+    * C++信号传递给QML的槽函数
+```
+    //C++ 衔接上面的实例
+    //fromCppInfo为qml当中的该组件的槽函数 每次都可以调用
+    //C++接受到数据层传递过来的信号 然后调用该QML的槽方法
+    QVariant returnedValue;//接受QML的槽函数的返回值
+    QVariant msg = lstnumber;//函数参数
+    QVariant myinfo;//函数参数
+    QMetaObject::invokeMethod(qml_object, "fromCppInfo",
+                                  Q_RETURN_ARG(QVariant, returnedValue),
+                                  Q_ARG(QVariant, msg),Q_ARG(QVariant, myinfo));
+
+    //QML代码
+    Item {
+    id:container
+    width: 613
+    height: 569
+    property variant chatArrId: []
+    property Item chatUI;
+    property int iMargin: 6
+        //C++信号新建聊天窗口 tmp为C++传递过来的基础类型
+        function fromCppInfo(tmp,myinfo)
+        {
+            var winid = tmp[5];
+            var msgType = tmp[11];
+            var talkId = tmp[14];
+            .......
+        }
+    }
+
+```
+## 应用场景
+* 方便QML写高效率的UI
+* 方便C++处理高效的算法和业务
+* 实现C++与界面分离
+* 实现C++与QML的桥梁连接
+
+## 有问题反馈
+在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+
+* 邮件(373955953#qq.com, 把#换成@)
+* QQ: 39559539234
+* QQ群:312125701
+* github: [@寒山-居士](https://github.com/toby20130333)
+
+## 关于作者
+
+```javascript
+
+  var duoduozhijiao = {
+    nickName  : "寒山-居士",
+    site : "http://www.heilqt.com",
+    blog : "http://blog.heilqt.com"
+  }
+
+```
