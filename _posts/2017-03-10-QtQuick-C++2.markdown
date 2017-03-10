@@ -1,0 +1,198 @@
+---
+layout:     post
+title:      "基于QtQuick和C++的深度交互方式之二"
+subtitle:   " \"QtQuick与C++交互-2\""
+date:       2017-03-10
+author:     "Tobyyi"
+header-img: "http://qtclub.qiniudn.com/quickplus2.jpg"
+tags:
+    - QtQuick
+    - C++
+    - 移动开发
+---
+
+> “Yeah It's on. ”
+
+## C++注册QObject
+
+    * qmlRegisterType 是一个可以将C++实现的类在QML中调用的，连接C++和QML的一个工具
+
+    * mlRegisterType里总共4个参数，第一个参数* uri指的是QML中import后的内容，相当于头文件名，第二个第三个参数分别是主次版本号，第四个指的是QML中类的名字(必须首字母大写)
+
+```
+    //C++
+    //实例一个QQuickView
+    //main.cpp
+    qmlRegisterType<DDuiInterface>("MyDataInterface",1,1,"DDuiInterface");
+```
+
+```
+ //DDuiInterface 类
+#ifndef DDUIINTERFACE_H
+#define DDUIINTERFACE_H
+
+#include <QObject>
+/**********************************************************/
+/*qml 和 数据层通行接口类,在qml实例此接口和数据层通信
+/*********************************************************/
+#include <QObject>
+class DDuiInterface : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(QString strError READ getError WRITE setError)
+public:
+    explicit DDuiInterface(QObject *parent = 0);
+    QString getError(){ return strError;}
+    void setError(const QString& error){strError = error;}
+signals:
+    //notify qml the data has responsed
+    void signalResponseDataReady(bool error,int cmd,QStringList finalData);
+    //notify qml  to updata ui⋯⋯
+    void signalNotifyUI(bool error,int cmd,QStringList notifyData);
+
+public slots:
+    //process the qml Request
+    void slotRequestData(int cmd,QStringList parameterList);
+    //process the qml Response
+    void slotResponseNotifyUI(bool error,int cmd,QStringList processResult);
+
+    void creatConnection();
+    void slotChangeCursor(int flag);
+private:
+    QString strError;
+    bool    isConnected;
+};
+
+#endif // DDUIINTERFACE_H
+
+```
+
+```
+    //QML代码
+    //导入该包名 C++里面注册的
+    import MyDataInterface 1.1
+
+    Item {
+    id:container
+    width: 613
+    height: 569
+    property variant chatArrId: []
+    property Item chatUI;
+    property int iMargin: 6
+    signal signalRevicSlot(variant tmp);
+    signal signalTabViewChanged(variant info,string iType);//1:delete 2: send msg //3:currentindex changed;
+        Component.onCompleted: {
+            signalTabViewChanged([0,1,2,2],2);
+        }
+    }
+    //实例该对象
+    DDuiInterface{
+        id:dataInterface
+    }
+
+```
+
+## main函数注册单例1
+
+    * 一个基于QQmlApplicationEngine的app
+
+    * C++单例注册到QML中
+
+```
+    //main.cpp
+    QApplication app(argc, argv);
+    QQmlApplicationEngine engine;
+    DDuiObjInstance dduiObj;//单例
+    engine.rootContext()->setContextProperty("dduiObj", &dduiObj);
+    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
+    app.exec();
+```
+
+```
+    //QML代码示例
+    //与C++进行通信的单例 可以监听该单例的任何信号
+    //可以在任何基于该程序的子qml里面使用该单例的函数
+    //该单例的函数必须为槽函数 或者方法前加上Q_INVOKABLE进行修饰
+    Connections {
+        target: dduiObj //C++注册的单例
+        onSignalPrintFinished: console.log("The print page data finished!")
+    }
+
+```
+
+## main函数注册单例2
+
+    * 一个基于QQmlApplicationEngine的app
+
+    * C++单例注册到QML中
+
+```
+
+  // First, define the singleton type provider function (callback).
+  // 注册单例函数
+static QObject* CPlusPlusSingletonRegisterFunc(
+        QQmlEngine* pQMLEngine,
+        QJSEngine* pJSEngine )
+{
+    Q_UNUSED( pQMLEngine );
+    Q_UNUSED( pJSEngine );
+
+    DDuiObjInstance* pSingleton = new DDuiObjInstance;
+    return pSingleton;
+}
+
+    //main.cpp
+    QApplication app(argc, argv);
+    QQmlApplicationEngine engine;
+    // 首先注册一下单例
+    qmlRegisterSingletonType<CPlusPlusSingleton>(
+                "DDuiObjInstance",                  // 统一资源标识符
+                1,                                // 主版本
+                0,                                // 次版本
+                "dDuiObjInstance",              // 单例名称
+                CPlusPlusSingletonRegisterFunc );   // 函数名
+    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
+    app.exec();
+```
+
+```
+    //QML代码示例
+    //与C++进行通信的单例 可以监听该单例的任何信号
+    //可以在任何基于该程序的子qml里面使用该单例的函数
+    //该单例的函数必须为槽函数 或者方法前加上Q_INVOKABLE进行修饰
+
+    import DDuiObjInstance 1.1
+    Connections {
+        target: dDuiObjInstance //C++注册的单例
+        onSignalPrintFinished: console.log("The print page data finished!")
+    }
+
+```
+
+## 应用场景
+
+* 方便QML写高效率的UI
+* 方便C++处理高效的算法和业务
+* 实现C++与界面分离
+* 实现C++与QML的桥梁连接
+
+## 有问题反馈
+
+在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+
+* 邮件(373955953#qq.com, 把#换成@)
+* QQ: 39559539234
+* QQ群:312125701
+* github: [@寒山-居士](https://github.com/toby20130333)
+
+## 关于作者
+
+```javascript
+
+  var duoduozhijiao = {
+    nickName  : "寒山-居士",
+    site : "http://www.heilqt.com",
+    blog : "http://blog.heilqt.com"
+  }
+
+```
