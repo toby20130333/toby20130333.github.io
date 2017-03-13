@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "基于Qt下封装CTP接口"
+title:      "基于Qt封装期货CTP接口"
 subtitle:   " \"基于Qt框架的期货CTP\""
 date:       2017-03-13
 author:     "Tobyyi"
