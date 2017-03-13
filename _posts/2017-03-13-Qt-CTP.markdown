@@ -33,17 +33,19 @@ tags:
 
 * 交易API
 
-   * 交易接口（Trader API）
+   * 交易接口(Trader API)
 
-   * 风控接口（Risk API）
+   * 风控接口(Risk API)
 
-   * 结算接口（CSV
+   * 结算接口(CSV)
 
 ## 基于Qt的C++类行情接口实现
+
 
   * 继承CThostFtdcMdSpi的行情接口类 实现行情接口回调处理
 
   * 继承QObject 实现信号槽的连接
+
 
 ```
 #ifndef DDUIMARKETDATAAPI_H
