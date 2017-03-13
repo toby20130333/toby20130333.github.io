@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "基于Qt下封装CTP接口
+title:      "基于Qt下封装CTP接口"
 subtitle:   " \"基于Qt框架的期货CTP\""
 date:       2017-03-13
 author:     "Tobyyi"
@@ -11,7 +11,7 @@ tags:
     - CTP
 ---
 
-> “ Yeah It's on. ”
+> “Yeah It's on. ”
 
 ## CTP开发需要C++基础
 
@@ -28,14 +28,18 @@ tags:
 ## CTP系统架构
 
 * 行情API
-   1.行情订阅合约代码
+
+   * 行情订阅合约代码
 
 * 交易API
-   1.交易接口（Trader API）
-   2.风控接口（Risk API）
-   3.结算接口（CSV
 
- ## 基于Qt的C++类行情接口实现
+   * 交易接口（Trader API）
+
+   * 风控接口（Risk API）
+
+   * 结算接口（CSV
+
+## 基于Qt的C++类行情接口实现
 
   * 继承CThostFtdcMdSpi的行情接口类 实现行情接口回调处理
 
@@ -193,7 +197,7 @@ signals:
     * QtWidgets类中使用
 
 ```
-    ///
+
 /// \brief DDuiCTPWidget::connectTraderServer
 /// 初始化交易工作线程
 ///     // 订阅私(公)有流
