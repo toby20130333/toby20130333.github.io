@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "(qpm)第三方Qt库的包分发平台"
+title:      "(qpm)Qt库的分发平台"
 subtitle:   " \"A package manager for Qt\""
 date:       2017-06-16
 author:     "Tobyyi"
