@@ -1,0 +1,130 @@
+---
+layout:     post
+title:      "基于Qt开发的第三方库的包分发平台(qpm)"
+subtitle:   " \"A package manager for Qt\""
+date:       2017-06-16
+author:     "Tobyyi"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/QQ%E6%88%AA%E5%9B%BE20170616135938.png"
+tags:
+    - QtQuick
+    - Qt
+    - qpm
+    - 包分发平台
+---
+
+> “Yeah It's on... ”
+
+## qpm简介?
+
+* qpm重点关注的是应用程序的开发。所有包依赖项都可以直接编译到应用程序二进制文件中。
+
+* qpm可以运行于任何Qt所支持的平台上
+
+* qpm.io是开放式基于管理Qt和QtQuick包的平台，任何人都可以使用它,并且贡献代码
+
+* qpm工具是开源的。项目托管在GitHub上。有任何问题可以进行反馈
+
+
+
+## qpm能做什么?
+
+* 能够从这个平台找到极好的Qt和QtQuick的组件或者资源，从而应用到你的项目当中来
+
+* [qpm](http://www.qpm.io/)可以跟踪和及时更新到最新版本的组件包或者qt资源
+
+* 使用现成的组件可以快速构建你的应用
+
+
+## QPM旨在：
+
+* 帮助应用程序和库开发人员。
+
+* 提供可重复使用的qt和QtQuick组件的包登记中心平台。
+
+* 为应用程序生成一致的依赖关系。
+
+
+## 开发者如何使用qpm
+
+* 开发者可以使用qpm的指令进行操作
+
+```
+qpm search <package name> //查找某包是否存在
+
+qpm info <package name>  //查找某包的详细信息
+
+qpm install <package name> //安装某包
+
+//当前目录可以新建一个qpm.json文件,里面可以含有需要依赖的Qt组件包
+//Like this
+    "devDependencies": {
+        "vendor": "~0.4.5",
+        "com.balabit.qlogsystem": "~0.11.4"
+    }
+
+qpm install package@1.0.1 //可指定安装某包的版本
+
+qpm uninstall <package name>//可卸载安装的某包的版本
+
+```
+
+* 如果使用的QML的应用 则需要注意
+
+```
+    QQmlApplicationEngine engine;
+    QPM_INIT(engine)//notice!!!
+    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+
+```
+
+## 开发者如何分享自己开发的Qt和QtQuick的包
+
+* 使用qpm init 按照提示一步步输入信息
+
+* 在本地可以快速生成一些符合qpm的模板文件
+
+* 使用qpm check检查是否完整
+
+* 完善我们需要分享的Qt或者QtQuick包
+
+* 最后qpm publish
+
+* 需要注意:网络原因可能需要翻墙处理
+
+
+##  示例包
+
+* 可参考[https://github.com/Cutehacks/qpm-example](https://github.com/Cutehacks/qpm-example)
+
+## 注意事项
+
+    * 国内网络复杂，需要大家自行处理
+
+
+## 应用场景
+
+* 方便Qt开发者关注业务逻辑实现，无需为额外的功能库重复造轮子
+
+* 可复用性场合
+
+
+## 有问题反馈
+
+在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+
+* 邮件(373955953#qq.com, 把#换成@)
+* QQ: 39559539234
+* QQ群:312125701
+* github: [@寒山-居士](https://github.com/toby20130333)
+
+## 关于作者
+
+```javascript
+
+  var duoduozhijiao = {
+    nickName  : "寒山-居士",
+    site : "http://www.heilqt.com",
+    blog : "http://blog.heilqt.com"
+  }
+
+```
