@@ -35,7 +35,7 @@ tags:
 * 使用现成的组件可以快速构建你的应用
 
 
-## QPM旨在：
+## qpm旨在：
 
 * 帮助应用程序和库开发人员。
 
@@ -45,6 +45,10 @@ tags:
 
 
 ## 开发者如何使用qpm
+
+* 可以官网下载[qpm-windows](https://www.qpm.io/download/v0.10.0/windows_386/qpm.exe) 其他平台官网查看
+
+* 安装qpm.exe，可以设置环境变量，则可在cmd直接使用qpm指令
 
 * 开发者可以使用qpm的指令进行操作
 
