@@ -27,7 +27,9 @@ tags:
 ![历史成交](http://qtddui.b0.upaiyun.com/gitdir/history.png)
 ![历史曲线](http://qtddui.b0.upaiyun.com/gitdir/chart.png)
 
-## 数字货币客户端
+** 数字货币客户端 ** 
+
+* 未完待续......
 
 ### 使用QtQuick技术开发酷炫的客户端
 
