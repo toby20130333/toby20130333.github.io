@@ -20,7 +20,7 @@ tags:
 >  区块链技术迅速发展
 
 
-# (20170510持续更新)基于QtQuick2.0开发数字货币行情交易客户端
+**(20170510持续更新)基于QtQuick2.0开发数字货币行情交易客户端**
 
 ![行情](http://qtddui.b0.upaiyun.com/gitdir/market.png)
 ![深度行情](http://qtddui.b0.upaiyun.com/gitdir/depth.png)
@@ -31,7 +31,7 @@ tags:
 
 * 源码-未完待续......
 
-### 使用QtQuick技术开发酷炫的客户端
+**使用QtQuick技术开发酷炫的客户端**
 
 * 支持Windows和Mac平台编译
 * 使用QML开发客户端界面
@@ -43,7 +43,7 @@ tags:
 * 新增二维码生成接口(可以参考我的另外的项目[二维码生成器](https://github.com/toby20130333/qtquickqrencode))
 * 加入系统托盘功能
 
-## 憧憬
+**憧憬**
 
 * 实现国内针对QtQuick最新信息的更新和传播
 * 扩大QtQuick在移动开发领域的知名度
@@ -51,13 +51,13 @@ tags:
 * 为自身的App打下基石
 
 
-## 贡献
+**贡献**
 
 * [寒山-居士](https://github.com/toby20130333)
 * [toby520](http://www.heilqt.com)
 
 
-## 注意事项
+**注意事项**
 
 * 目前支持Qt5.x以上版本 但是Mac Qt5.8对Http支持需要修改plist 详细参考mac开发 且Qt5.8存在http的bug
 * 有任何QtQuick相关的问题可以到[QtQuick博客](http://www.heilqt.com)进行提问或者加入网站底部的QQ群
