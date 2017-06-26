@@ -5,6 +5,7 @@ subtitle:   " \"A package manager for Qt\""
 date:       2017-06-16
 author:     "Tobyyi"
 header-img: "http://qtddui.b0.upaiyun.com/gitdir/QQ%E6%88%AA%E5%9B%BE20170616135938.png"
+catalog:    true
 tags:
     - QtQuick
     - Qt
