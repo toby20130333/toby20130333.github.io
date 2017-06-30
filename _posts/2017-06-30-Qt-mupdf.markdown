@@ -1,0 +1,74 @@
+---
+layout:     post
+title:      "基于Qt5.7-vs2013编译mupdf源码"
+subtitle:   " \"Building Mupdf for Qt\""
+date:       2017-06-30
+author:     "Tobyyi"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/shoot3.jpg"
+catalog:    true
+tags:
+    - mupdf
+    - Qt
+    - pdf
+---
+
+> “mupdf是一个开源的读取pdf文件的工具... ”
+>  <br/>
+>  加油吧 骚年
+
+
+**(20170630持续更新)基于Qt5.7-vs2013编译mupdf源码及mupdf-qt源码**
+
+![使用vs2013编译mupdf源码](http://qtddui.b0.upaiyun.com/gitdir/shoot1.png)
+![使用vs2013编译qt-mupdf源码](http://qtddui.b0.upaiyun.com/gitdir/shoot2.png)
+
+**使用MuPDF源码编译**
+
+	* mupdf是一个开源的读取pdf文件的工具，我也一直用这个即简洁又灵巧的东西阅读PDF文档，电脑上没有安装Adobe Reader及Acrobat系列，也没有安装Foxit系列的PDF阅读器，因为mupdf总是可以满足我的需求了，而我的需求也确实并不高，而且mupdf有类似于vi的按键操作，'j','k','l','h',',','.',   g 用来转到指定页面，147g则转到第147页。灰常好用。
+
+	* 下面编译一下[qt-mupdf](https://github.com/xiangxw/mupdf-qt)的例子，由于使用的是win系统，所以以下是在win上的vs2013的编译步骤。
+	* mupdf官方下载地址：[www.mupdf.com](www.mupdf.com)
+	
+	将代码克隆下来
+
+	```
+	git clone https://github.com/xiangxw/mupdf-qt.git
+
+	```
+
+	qt-mupdf的目录构成：
+
+	点击该目录mupdf有个platform目录，下面有win32目录，打开里面的mupdf.sln
+
+	1. 编译出来mupdf工程，会有生成的三个库文件(静态文件 方便集成到项目)：
+    	libmupdf.lib
+    	libmupdf-js-none.lib
+    	libthirdparty.lib
+
+    2. Launch CMake(gui version), set source code directory and build directory. Configure and generate mupdf-qt.sln. Open mupdf-qt.sln and build it.
+    (开启CMake的界面,设置源码路径和编译目标路径，然后点击配置按钮和生成按钮，将生成mupdf-qt.sln
+    ,打开该sln，只对其中的mupdf-qt的进行编译即可)
+
+    3. 自己可根据mupdf-qt提供的接口开发pdf阅读器程序
+
+
+**憧憬**
+
+* 实现国内针对QtQuick和Qt最新信息的更新和传播
+* 扩大QtQuick和Qt在移动开发领域的知名度
+* 兼容各个主流平台的开发
+* 为自身的App打下基石
+
+
+**贡献**
+
+* [寒山-居士](https://github.com/toby20130333)
+* [toby520](http://www.heilqt.com)
+* [xiangxw](https://github.com/xiangxw/mupdf-qt)
+
+
+**注意事项**
+
+* 目前支持Qt5.x以上版本
+* 有任何Qt相关的问题可以到[QtQuick博客](http://www.heilqt.com)进行提问或者加入网站底部的QQ群
+* 例子中涉及到图片资源，请自行提供(涉及到图片版权问题)
