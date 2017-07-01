@@ -19,12 +19,13 @@ tags:
 **分享的起因**
 
 	* csdn看到有人问如何动态创建tab页面，而且能够获取当前tab页面的内容，或者说如何调用页面的方法，我们看代码吧。
-
+  
 	* Tab页面的qml代码(Mytab.qml)
 
 
-	```
-  import QtQuick 2.0
+```
+
+import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
 Rectangle{
