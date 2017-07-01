@@ -1,0 +1,177 @@
+---
+layout:     post
+title:      "QML之TabView动态添加Tab页面"
+subtitle:   " \"Create Tab Page By Dynamic\""
+date:       2017-07-01
+author:     "Tobyyi"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/shoot3.jpg"
+catalog:    true
+tags:
+    - QtQuick
+    - Qt
+    - pdf
+---
+
+>  QtQuick基础知识
+>  加油吧 骚年
+
+
+**分享的起因**
+
+	* csdn看到有人问如何动态创建tab页面，而且能够获取当前tab页面的内容，或者说如何调用页面的方法，我们看代码吧。
+
+	* Tab页面的qml代码(Mytab.qml)
+
+
+	```
+  import QtQuick 2.0
+import QtQuick.Controls 1.1
+import QtQuick.Layouts 1.1
+Rectangle{
+    id:tab
+    width:400
+    height:parent.width
+    Flickable {
+         id: flick
+         width: 300; height: 200;
+         anchors.centerIn: parent
+         contentWidth: edit.paintedWidth
+         contentHeight: edit.paintedHeight
+         clip: true
+         function ensureVisible(r)
+         {
+             if (contentX >= r.x)
+                 contentX = r.x;
+             else if (contentX+width <= r.x+r.width)
+                 contentX = r.x+r.width-width;
+             if (contentY >= r.y)
+                 contentY = r.y;
+             else if (contentY+height <= r.y+r.height)
+                 contentY = r.y+r.height-height;
+         }
+         TextEdit {
+             id: edit
+             width: flick.width
+             height: flick.height
+             focus: true
+             wrapMode: TextEdit.Wrap
+             onCursorRectangleChanged: flick.ensureVisible(cursorRectangle)
+         }
+     }
+    function returnTxt(){
+        return edit.text;
+    }
+    function setTxt(str){
+        edit.text = str+"页面";
+    }
+}
+
+	```
+
+  * 主页面(tabview.qml)
+
+  ```
+  import QtQuick 2.0
+import QtQuick.Controls 1.1
+import QtQuick.Layouts 1.0
+Rectangle {
+    width: 400
+    height: 462
+    Row{
+        id:col
+        width: parent.width
+        height: 50
+        Button{
+            id:addTab
+            width:col.width/2
+            height:50
+            text: "添加页面"
+            onClicked:{
+                tabview.loadTab();
+            }
+        }
+        Button{
+            id:getInfo
+            width:col.width/4
+            height:50
+            text:"获取当前页面内容"
+            onClicked:{
+                input.text = getCurrentTxt(tabview.currentIndex);
+            }
+        }
+        TextInput{
+            id:input
+            width:col.width/4
+            height:50
+            text:"当前页面内容...."
+            clip:true
+            wrapMode: TextInput.WrapAnywhere
+        }
+    }
+    TabView{
+        id:tabview
+        visible: true
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: col.bottom
+        anchors.bottom: parent.bottom
+        Component{
+            id:viewComp
+            Mytab{
+                anchors.fill:parent
+                color:"black"
+            }
+        }
+        function loadTab(){
+            var c_tab=currentIndex;
+            var t=tabview.addTab(count,viewComp)
+            currentIndex=count-1;
+            t.item.color=Qt.rgba(Math.random(),Math.random(),Math.random(),1.0)
+            setCurrentTxt(tabview.currentIndex,count-1);
+            tabview.currentIndex = count-1;
+        }
+    }
+    function setCurrentTxt(index,txt){
+        var obj =  tabview.getTab(index);
+        if(obj){
+            var item = obj.item;
+            if(item){
+                 item.setTxt(txt);
+            }
+        }
+    }
+    function getCurrentTxt(index){
+        var obj =  tabview.getTab(index);
+        if(obj){
+            var item = obj.item;
+            if(item){
+                return item.returnTxt();
+            }
+        }
+        return "error";
+    }
+}
+
+  ```
+
+  * 以上代码即可实现动态添加，而且获取tab页面的任何信息,继续开发你的app
+
+**憧憬**
+
+* 实现国内针对QtQuick和Qt最新信息的更新和传播
+* 扩大QtQuick和Qt在移动开发领域的知名度
+* 兼容各个主流平台的开发
+* 为自身的App打下基石
+
+
+**贡献**
+
+* [寒山-居士](https://github.com/toby20130333)
+* [toby520](http://www.heilqt.com)
+
+
+**注意事项**
+
+* 目前支持Qt5.x以上版本
+* 有任何Qt相关的问题可以到[QtQuick博客](http://www.heilqt.com)进行提问或者加入网站底部的QQ群
+* 例子中涉及到图片资源，请自行提供(涉及到图片版权问题)
