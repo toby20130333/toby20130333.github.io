@@ -16,6 +16,8 @@ tags:
 > <br/>
 >  加油吧 骚年
 
+![bg](https://yunba.io/static/img/introduce.jpg)
+
 ## Notify Powered By Qt Module and Yunba SDK
 
 * 今天挪点时间，整理下QML iOS相关的混合编程的demo，放出源码给大家学习，改进.
@@ -24,6 +26,7 @@ tags:
 
 
 ## Dependencies
+
 
     * Requires Qt 5.3 or higher
 
@@ -34,6 +37,7 @@ tags:
     * Requires Object-C Hybrid Programming
 
     * pro:
+
 ```
     QMAKE_LFLAGS    += -framework OpenGLES
     QMAKE_LFLAGS    += -framework GLKit
@@ -45,6 +49,7 @@ tags:
     QMAKE_LFLAGS    += -framework CoreMedia
 
 ```
+
 ## How to build
 
     * checkout the root of [the repository](https://github.com/toby20130333/qtiospush):
@@ -57,7 +62,7 @@ tags:
 
 ## PreView
 
-![ios运行界面](http://ju.outofmemory.cn/imgr?src=http%3A%2F%2F7qn7mv.com1.z0.glb.clouddn.com%2F_dduiyunba.png)
+![ios运行界面](https://qn7mv.com1.z0.glb.clouddn.com/_dduiyunba.png)
 
 **憧憬**
 
