@@ -12,16 +12,17 @@ tags:
     - TagLib
 ---
 
->  QtQuick基础知识
+>  Qt音视频基础知识
+> <br/>
 >  加油吧 骚年
 
-## DDuiAudioTags Powered Qt Module
+## TagLib Powered Qt Module
 
-* TagLib Audio Meta-Data Library TagLib is a library for reading and editing the meta-data of several popular audio formats. Currently it supports both ID3v1 and ID3v2 for MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC, MPC, Speex, WavPack TrueAudio, WAV, AIFF, MP4 and ASF files.
+* [TagLib](http://taglib.org/) Audio Meta-Data Library TagLib is a library for reading and editing the meta-data of several popular audio formats. Currently it supports both ID3v1 and ID3v2 for MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC, MPC, Speex, WavPack TrueAudio, WAV, AIFF, MP4 and ASF files.
 
-TagLib is distributed under the GNU Lesser General Public License (LGPL) and Mozilla Public License (MPL). Essentially that means that it may be used in proprietary applications, but if changes are made to TagLib they must be contributed back to the project. Please review the licenses if you are considering using TagLib in your project.
+* TagLib is distributed under the GNU Lesser General Public License (LGPL) and Mozilla Public License (MPL). Essentially that means that it may be used in proprietary applications, but if changes are made to TagLib they must be contributed back to the project. Please review the licenses if you are considering using TagLib in your project.
 
-There is some general information about the motivation and workings of TagLib that can be found in the [API documentation](http://taglib.org/api/)
+* There is some general information about the motivation and workings of TagLib that can be found in the [API documentation](http://taglib.org/api/)
 
 ## TagLib的编译过程
 
@@ -34,17 +35,17 @@ There is some general information about the motivation and workings of TagLib th
 
 ## How to build
 
- * Add the [Taglib source](http://taglib.org/) code to your local machine on Mac Windows Linux.
+ * Add the [Taglib_1.11.1 source](http://taglib.org/releases/taglib-1.11.1.tar.gz) code to your local machine on Mac Windows Linux.
 
  * Make Sure Setting your env for make and cmake
 
 ```
-open qtcreator
-open cmakelist.txt with qtcreator
-run  cmake
-make clean(mingw32-make clean)
-make （mingw32-make mingw) | nmake(vc)
-sudo make install (*unix)
+    open qtcreator
+    open cmakelist.txt with qtcreator
+    run  cmake
+    make clean(mingw32-make clean)
+    make （mingw32-make mingw) | nmake(vc)
+    sudo make install (*unix)
 
 ```
 
@@ -66,32 +67,32 @@ sudo make install (*unix)
 * Write some test codes
 
 ```
-///
-/// \brief Widget::gettags
-/// \param mediafile
-/// \return
-/// 获取mp3的信息
-/// 以下只是获取了部分信息
-/// 你可以参考FileRef这个类把想要拿到的数据都可以取出来
-/// mediafile为mp3文件的路径
-QString Widget::gettags(QString mediafile){
-    QString string;
-    TagLib::FileRef file(mediafile.toUtf8().data());
-    TagLib::String title_string = file.tag()->title();
-    TagLib::String album_string = file.tag()->album();
-    QString title = QString::fromStdWString(title_string.toWString());
-    QString  album = QString::fromStdWString(album_string.toWString());
-    QString artist = QString::fromStdWString(file.tag()->artist().toWString());
-    QString comment = QString::fromStdWString(file.tag()->comment().toWString());
-    QString genre = QString::fromStdWString(file.tag()->artist().toWString());
-    QString year = QString::number(file.tag()->year());
-    string = "标题: " + title+"\n唱片集:"+album + " \n艺术家:" + artist+"\n注释:"+comment+ " \n流派: " + genre+"\n年份: "+year;
-    QString lengths = QString::number(file.audioProperties()->bitrate());
-    string.append("\n比特率: ");
-    string.append(lengths);
-    string.append("kbps");
-    return string;
-}
+    ///
+    /// \brief Widget::gettags
+    /// \param mediafile
+    /// \return
+    /// 获取mp3的信息
+    /// 以下只是获取了部分信息
+    /// 你可以参考FileRef这个类把想要拿到的数据都可以取出来
+    /// mediafile为mp3文件的路径
+    QString Widget::gettags(QString mediafile){
+        QString string;
+        TagLib::FileRef file(mediafile.toUtf8().data());
+        TagLib::String title_string = file.tag()->title();
+        TagLib::String album_string = file.tag()->album();
+        QString title = QString::fromStdWString(title_string.toWString());
+        QString  album = QString::fromStdWString(album_string.toWString());
+        QString artist = QString::fromStdWString(file.tag()->artist().toWString());
+        QString comment = QString::fromStdWString(file.tag()->comment().toWString());
+        QString genre = QString::fromStdWString(file.tag()->artist().toWString());
+        QString year = QString::number(file.tag()->year());
+        string = "标题: " + title+"\n唱片集:"+album + " \n艺术家:" + artist+"\n注释:"+comment+ " \n流派: " + genre+"\n年份: "+year;
+        QString lengths = QString::number(file.audioProperties()->bitrate());
+        string.append("\n比特率: ");
+        string.append(lengths);
+        string.append("kbps");
+        return string;
+    }
 
 ```
 
