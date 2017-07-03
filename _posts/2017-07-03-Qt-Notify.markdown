@@ -27,16 +27,16 @@ tags:
 
 ## Dependencies
 
+* Requires Qt 5.3 or higher
 
-    * Requires Qt 5.3 or higher
+* Requires [Yunba iOS SDK](https://yunba.io/docs/ios_sdk_quick_start) As the third party lib.
 
-    * Requires [Yunba iOS SDK](https://yunba.io/docs/ios_sdk_quick_start) As the third party lib.
+* Requires XCode Dependent libraries Like
 
-    * Requires XCode Dependent libraries Like
+* Requires Object-C Hybrid Programming
 
-    * Requires Object-C Hybrid Programming
+* pro:
 
-    * pro:
 
 ```
     QMAKE_LFLAGS    += -framework OpenGLES
@@ -52,17 +52,19 @@ tags:
 
 ## How to build
 
-    * checkout the root of [the repository](https://github.com/toby20130333/qtiospush):
+* checkout the root of [the repository](https://github.com/toby20130333/qtiospush):
 
-    * Open QtCreator Tool.
+* Open QtCreator Tool.
 
-    * ReBuild this YunbaQtforiOS.pro
+* ReBuild this YunbaQtforiOS.pro
 
-    * Run on The iOS simulator or iPhonex
+* Run on The iOS simulator or iPhonex
+* 
 
 ## PreView
 
 ![ios运行界面](http://qtddui.b0.upaiyun.com/gitdir/33333.png)
+
 
 **憧憬**
 
