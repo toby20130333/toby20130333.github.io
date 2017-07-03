@@ -28,7 +28,7 @@ tags:
 
 * [How to build](#how-to-build)
 
-* [How to use with TagLib](How-to-use-with-TagLib)
+* [How to use with TagLib](#How-to-use-with-TagLib)
 
 * [Todo](#todo)
 

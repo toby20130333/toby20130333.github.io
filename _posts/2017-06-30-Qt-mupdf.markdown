@@ -69,6 +69,7 @@ tags:
 
 **注意事项**
 
+* 其他平台编译可参考[Mac Linux平台](http://ju.outofmemory.cn/entry/248600)
 * 目前支持Qt5.x以上版本
 * 有任何Qt相关的问题可以到[QtQuick博客](http://www.heilqt.com)进行提问或者加入网站底部的QQ群
 * 例子中涉及到图片资源，请自行提供(涉及到图片版权问题)
