@@ -28,8 +28,8 @@ tags:
 
 * [How to build](#how-to-build)
 
-* [How to use](#How-to-use)
-
+* [How to use](#how-to-use)
+s
 * [Todo](#todo)
 
 
