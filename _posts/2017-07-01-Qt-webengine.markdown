@@ -22,63 +22,63 @@ tags:
 * 基于qml1代码
 
 ```
-import QtQuick 1.0
-import MuseScore 1.0
-import QtWebKit 1.0
-import FileIO 1.0 //C++插件
-MuseScore {
-    menuPath: "Plugins.ABC Web"
-    onRun: {}
-  FileIO {
-        id: myFile
-        source: tempPath() + "/my_file.xml"
-        onError: console.log(msg)
-    }
-   WebView {
-        javaScriptWindowObjects: QtObject {
-            WebView.windowObjectName: "qml"
-             function qmlCall(abc) {
-                var doc = new XMLHttpRequest()
-                var url = "http://abc2musicxml.appspot.com/abcrenderer?abc=" + encodeURIComponent(abc);
-                doc.onreadystatechange = function() {
-                    if (doc.readyState == XMLHttpRequest.DONE) {
-                        var a = doc.responseText;
-                        myFile.write(a);
-                        readScore(myFile.source);
-                        Qt.quit();
-                    }
-                }
-                doc.open("GET", url);
-                doc.send()
-            }
+    import QtQuick 1.0
+    import MuseScore 1.0
+    import QtWebKit 1.0
+    import FileIO 1.0 //C++插件
+    MuseScore {
+        menuPath: "Plugins.ABC Web"
+        onRun: {}
+      FileIO {
+            id: myFile
+            source: tempPath() + "/my_file.xml"
+            onError: console.log(msg)
         }
-        preferredWidth: 490
-        preferredHeight: 400
-        settings.javascriptEnabled:true
-        html: "<html><head></head><body>Enter your ABC below <br/><div><textarea id='content' name='content' rows='15' cols='60'></textarea></div><div><a href="http://ddzhj.com/topic/55653ad90fe39eaf0e67c5bd" onClick=\"window.qml.qmlCall(document.getElementById('content').value);\">Convert</a></div></body></html>"
+       WebView {
+            javaScriptWindowObjects: QtObject {
+                WebView.windowObjectName: "qml"
+                 function qmlCall(abc) {
+                    var doc = new XMLHttpRequest()
+                    var url = "http://abc2musicxml.appspot.com/abcrenderer?abc=" + encodeURIComponent(abc);
+                    doc.onreadystatechange = function() {
+                        if (doc.readyState == XMLHttpRequest.DONE) {
+                            var a = doc.responseText;
+                            myFile.write(a);
+                            readScore(myFile.source);
+                            Qt.quit();
+                        }
+                    }
+                    doc.open("GET", url);
+                    doc.send()
+                }
+            }
+            preferredWidth: 490
+            preferredHeight: 400
+            settings.javascriptEnabled:true
+            html: "<html><head></head><body>Enter your ABC below <br/><div><textarea id='content' name='content' rows='15' cols='60'></textarea></div><div><a href="http://ddzhj.com/topic/55653ad90fe39eaf0e67c5bd" onClick=\"window.qml.qmlCall(document.getElementById('content').value);\">Convert</a></div></body></html>"
+        }
     }
-}
 ```
 
   * qml2的代码
 
   ```
-  import QtQuick 2.0
-import QtWebKit 3.0
-import QtWebKit.experimental 1.0
-Rectangle {
-    width: 1024
-    height: 768
-    WebView{
-        url: "http://localhost"
-        anchors.fill: parent
-        experimental.preferences.navigatorQtObjectEnabled: true
-        experimental.onMessageReceived: {
-            console.debug("get msg from javascript")
-            experimental.postMessage("HELLO")
+    import QtQuick 2.0
+    import QtWebKit 3.0
+    import QtWebKit.experimental 1.0
+    Rectangle {
+        width: 1024
+        height: 768
+        WebView{
+            url: "http://localhost"
+            anchors.fill: parent
+            experimental.preferences.navigatorQtObjectEnabled: true
+            experimental.onMessageReceived: {
+                console.debug("get msg from javascript")
+                experimental.postMessage("HELLO")
+            }
         }
-    } // webview
-} // rectanlge@
+    }
 
   ```
 
@@ -91,19 +91,19 @@ Rectangle {
         <p>Play with me...</p>
         <button onclick="nativecall();">test</button>
         <div id="out"></div>
-        <s r c p i t t p y e="t x e t / j a v s a c i r p t ">
+        <script type="text/javascript">
         function nativecall(){
             console.log("will try native call");
-            var elem = document.getElementById("out"). inner H t M l ="clicked";
+            var elem = document.getElementById("out"). innerhtml ="clicked";
             navigator.qt.postMessage('this is a js call');
         }
-function jsCall(message){
-    var elem = document.getElementById("out"). inner H t M l ="and the other way around " + message;
-}
-navigator.qt.onmessage = function(ev) {
-    jsCall(ev.data);
-}
-</ script >
+        function jsCall(message){
+            var elem = document.getElementById("out"). innerhtml ="and the other way around " + message;
+        }
+        navigator.qt.onmessage = function(ev) {
+            jsCall(ev.data);
+        }
+        </ script >
 </body>
 </html>
 
