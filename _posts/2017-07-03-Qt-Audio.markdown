@@ -28,7 +28,7 @@ tags:
 
 * [How to build](#how-to-build)
 
-* [How to use with TagLib](#How-to-use-with-TagLib)
+* [How to use](#How-to-use)
 
 * [Todo](#todo)
 
@@ -49,7 +49,7 @@ tags:
 
 ```
 
-## How to use with TagLib
+## How to use
 
 * Note that for the following, you need to have Qt SDK for Qt5.x or later installed.
 
