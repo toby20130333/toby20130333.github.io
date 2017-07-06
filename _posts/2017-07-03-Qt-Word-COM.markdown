@@ -4,7 +4,7 @@ title:      "QAxObject word文档添加页码(页眉和页脚)"
 subtitle:   " \"Base QAxObject for Doc Files\""
 date:       2017-07-06
 author:     "Tobyyi"
-header-img: "https://yunba.io/static/img/home.png"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/wordto.jpg"
 catalog:    true
 tags:
     - QtQuick
@@ -18,15 +18,18 @@ tags:
 
 >  加油吧 骚年
 
-# 分享的起因
+## 分享的起因
 
 * 最近工作需求有QAxObject 操作word文档添加页码的问题，借助[朋友的分享](http://blog.csdn.net/u013704776/article/details/74451462)。
+
+## 解释
 
 * 首先我们看看ActiveQt的非常重要的一个接口
 
 ```
 QString QAxBase::generateDocumentation()
-//Returns a rich text string with documentation for the wrapped COM object. Dump the string to an HTML-file, or use it in e.g. a QTextBrowser widget.
+//Returns a rich text string with documentation for the wrapped COM object. 
+//Dump the string to an HTML-file, or use it in e.g. a QTextBrowser widget.
 
 ```
   **generateDocumentation**可以打印出来不同的接口的相应的属性，槽函数，以及信号函数。在generateDocumentation打印出来的html文件，不像QtAssistant有很详细的说明，所以我们可以同时借助[VBAWD10.CHM](http://download.csdn.net/detail/luming_1979/4078943),下载该文件后记得右键属性解除锁定，不然无法查看详细的接口说明
