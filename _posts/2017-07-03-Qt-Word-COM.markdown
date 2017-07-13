@@ -154,6 +154,16 @@ if (!file8.open(QIODevice::WriteOnly | QIODevice::Text))
 QTextStream txtOutput8(&file8);
 txtOutput8 << text8 << endl;
 file8.close();
+QString tmpName = docPath;
+    tmpName = tmpName.replace(".docx","");
+    tmpName = tmpName.replace(".doc","");
+    tmpName = tmpName.replace(".DOC","");
+    tmpName = tmpName.replace(".DOCX","");
+//另存为pdf
+    params.clear();
+    params<<(tmpName);
+    params<<17;//表示pdf
+QVariant resVar = presentation->dynamicCall("SaveAs(QVariant&, QVariant&)", params);
 
 presentation->dynamicCall("SaveAs(const QString&)", filepath);
 delete presentation;
