@@ -194,6 +194,7 @@ excel = NULL;
 
 **注意事项**
 
+* 若是在线程中使用COM则必须进行初始化工作 函数CoInitialize 和相对应的卸载 函数CoUninitialize
 * 目前支持Qt5.x以上版本
 * 有任何Qt相关的问题可以到[QtQuick博客](http://www.heilqt.com)进行提问或者加入网站底部的QQ群-312125701
 * 例子中涉及到图片资源，请自行提供(涉及到图片版权问题)
