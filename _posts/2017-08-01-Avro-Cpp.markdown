@@ -1,0 +1,68 @@
+---
+layout:     post
+title:      "基于vs2013编译avro源码"
+subtitle:   " \"Building Avro on Windows \""
+date:       2017-08-01
+author:     "Tobyyi"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/wordto.jpg"
+catalog:    true
+tags:
+    - C++
+    - Qt
+    - Avro
+---
+
+>  如何编译avro
+
+> <br/>
+
+>  如果使用avro
+
+### 什么是Apache Avro
+
+* Avro数据文件格式只是Avro项目的一部分，它是高效的数据序列化框架，是由Doug Cutting创立的Apache顶级项目，在Hadoop和它的生态系统得到广泛的支持。最大的特点就是在不牺牲性能的前提下提供兼容性,可在Java、C、C++、C#、Python、PHP和其他语言中读写数据。Avro也支持Remote Procedure Calls（RPC），可以用于构建定制网络协议，而且Flume使用它进行内部通信。
+
+###  Avro源码
+
+* 官方[avro.apache.org-cpp](avro.apache.org) 
+
+### CMake编译
+
+* 使用cmake-gui工具将avro源码进行预编译[cmake使用可自行参考]
+* 配置依赖boost的某些库(filesystem system program_options iostreams)[可自行编译boost]
+* 生成vs2013解决方案
+
+
+### VS2013解决方案编译 
+
+* 启动Avro-cpp.sln解决方案进行编译
+* 编译过程中出现错误的话 需要右键属性进行调整配置
+* 产生avrocpp.dll 和 avrogencpp.exe(用于解析模板生成头文件的)
+* avrogencpp.exe可根据json模板生成相对于的.hh文件
+
+```bash
+avrogencpp -i demo.json -o demo.hh -n BD
+//设置环境变量 -n BD表示命名空间
+```
+	
+###  Qt集成
+
+* 将编译好的avrocpp.dll和头文件部署到相关项目目录下
+
+```
+win32:CONFIG(release, debug|release): 
+LIBS += -L$$PWD/avro/lib/release/ -lavrocpp
+else:win32:CONFIG(debug, debug|release): 
+LIBS += -L$$PWD/avro/lib/debug/ -lavrocppd
+
+INCLUDEPATH += $$PWD/avro/include
+DEPENDPATH += $$PWD/avro/include
+
+```
+* Qt测试demo可参考[github](https://github.com/toby20130333/QtAvro.git)
+
+### 贡献
+
+* [知乎-avro](https://zhuanlan.zhihu.com/p/24803426)
+* [寒山-居士](https://github.com/toby20130333)
+* [博客](http://www.heilqt.com)
