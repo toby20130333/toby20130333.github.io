@@ -24,7 +24,7 @@ tags:
 
 ###  Avro源码
 
-* 官方[avro.apache.org-cpp](avro.apache.org) 
+* 官方[avro.apache.org-cpp](https://avro.apache.org/) 
 
 ### CMake编译
 
@@ -59,7 +59,9 @@ INCLUDEPATH += $$PWD/avro/include
 DEPENDPATH += $$PWD/avro/include
 
 ```
+
 * Qt测试demo可参考[github](https://github.com/toby20130333/QtAvro.git)
+* 注意该demo无boost的头文件请自行补充
 
 ### 贡献
 
