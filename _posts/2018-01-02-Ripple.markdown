@@ -1,0 +1,64 @@
+---
+layout:     post
+title:      "如何入手有应用前景的数字货币之Ripple"
+subtitle:   " \"Trade Your Ripple \""
+date:       2018-01-02
+author:     "Tobyyi"
+header-img: "https://cdn.ripple.com/wp-content/themes/ripple-beta/assets/img/home/home-bg-new.jpg"
+catalog:    true
+tags:
+    - C++
+    - XRP
+    - 数字货币
+    - 区块链
+---
+
+### 什么是瑞波币
+
+* 瑞波币是Ripple网络的基础货币，它可以在整个ripple网络中流通，总数量为1000亿，并且随着交易的增多而逐渐减少，瑞波币的运营公司为Ripple Labs（其前身为OpenCoin）。
+瑞波币是ripple系统中唯一的通用货币，其不同于ripple系统中的其他货币，其他货币比如CNY、USD不能跨网关提现的，换句话说，A网关发行的CNY只能在A网关提现，若想在B网关提现，必须通过ripple系统的挂单功能转化为B网关的CNY才可以到B网关提现。而瑞波币完全没有这方面的限制，它在ripple系统内是通用的。
+2018年1月1日，瑞波币（ripple）交易价格在上周五暴涨近56%，创历史新高，市值一举超越以太币，成为第二大加密货币。
+
+###  瑞波协议源码
+
+* 开源地址:[[https://github.com/ripple]](https://github.com/ripple) 
+* 官方:[[https://ripple.com]](https://ripple.com) 
+
+
+### 瑞波币交易 
+
+#### 交易平台
+* 目前各个交易平台可进行资产兑换交易数字货币，主流数字货币交易平台包括 火币网 币安 比特时代 OKCoin等，国外平台不一一列举
+* 实名认证
+* 充值(走平台相关充值渠道，不可私下充值)
+* 交易(挂买卖单进行交易，不可私下交易)
+* 提现(走平台提现，警惕他人帮忙)
+
+#### 网关
+*  国内个人接触的就ripplechina网关
+* 网关交易比较底层，大部分人无法操作
+
+#### 钱包
+* 瑞波钱包:下载地址:[https://toastwallet.com/](https://toastwallet.com/)
+
+### 钱包教程
+* 关于钱包的教程可参考: [http://jc.ripplefox.com/#/create](http://jc.ripplefox.com/#/create)
+* 注意事项：
+1. 一定要把密钥抄下来，或者打印出来放到安全的地方。如果电脑坏了，可以用密钥恢复钱包。把刚才生成的wallet.txt放邮箱或网盘里也是个好方法。保存好了后，就点“嗯，我把密钥保存好了”
+2. 密钥千万不可泄露！！！
+3. 钱包激活问题，需要30个XRP进行钱包交易 方可进行交易
+4. 信任网关
+5. 交易
+6. 提现
+
+
+### 行情查看
+* 移动端推荐AICOIN app
+* PC端可查看各个交易平台
+* 自制行情软件查看(供开发者使用第三方交易平台的api进行私人定制)
+
+### 贡献
+* 觉得有帮助可以捐赠下XRP
+![XRP Address](http://qtddui.b0.upaiyun.com/gitdir/rippleaddress.png)
+* [寒山-居士](https://github.com/toby20130333)
+* [博客](http://www.heilqt.com)
