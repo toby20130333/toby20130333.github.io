@@ -67,7 +67,7 @@ tags:
 * 自制行情软件查看(供开发者使用第三方交易平台的api进行私人定制)
 
 ### 贡献
-* 觉得有帮助可以捐赠下XRP
+* 觉得有帮助可以捐赠下XRP(使用钱包发送功能将XRP发送到以下XRP地址即可)
 ![XRP Address](http://qtddui.b0.upaiyun.com/gitdir/rippleaddress.png)
 * [寒山-居士](https://github.com/toby20130333)
 * [博客](http://www.heilqt.com)
