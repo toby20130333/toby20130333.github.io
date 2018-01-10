@@ -48,6 +48,7 @@ tags:
 
 #### 钱包
 * 瑞波钱包:下载地址:[https://toastwallet.com/](https://toastwallet.com/)
+* 社区下载: 可根据下面的参考教程加扣扣群进行咨询
 
 ### 钱包教程
 * 关于钱包的教程可参考: [http://jc.ripplefox.com/#/create](http://jc.ripplefox.com/#/create)
