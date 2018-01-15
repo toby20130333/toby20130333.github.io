@@ -4,7 +4,7 @@ title:      "所有区块链技术开发相关资料"
 subtitle:   " \"Base Knowledge for BlockChain\""
 date:       2018-01-15
 author:     "Tobyyi"
-header-img: "https://yunba.io/static/img/home.png"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/blockchain.png"
 catalog:    true
 tags:
     - 区块链
