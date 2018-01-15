@@ -24,6 +24,7 @@ tags:
 
 * This is a client of QML And QWidgets implementing,It runs on iOS,There are currently officially supported.
 
+* 关于Qt在Android和iOS上如何接入消息推送功能可参考[https://github.com/shigmas/PushApp](https://github.com/shigmas/PushApp) 
 
 ## Dependencies
 
