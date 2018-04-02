@@ -1,3 +1,17 @@
+---
+layout:     post
+title:      "程序员如何优雅的挣零花钱？"
+subtitle:   " \"How to earn more money\""
+date:       2018-03-30
+author:     "Tobyyi"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/bc.jpeg"
+catalog:    true
+tags:
+    - 程序员
+    - 私单
+    - C++
+---
+
 # 程序员如何优雅的挣零花钱？
 
 [2016/08/06更新版]
@@ -123,4 +137,4 @@ Side Project的好处是你只需要对特定领域进行持续投入，就可�
 如果你有更好的挣零花钱技能，欢迎发PR过来，我会挑不错的合并进去 ：）
 
 
-[转载于](https://github.com/easychen/howto-make-more-money)
+[转载于github](https://github.com/easychen/howto-make-more-money)
