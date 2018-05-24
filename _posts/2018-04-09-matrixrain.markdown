@@ -4,7 +4,7 @@ title:      "基于QtQuick的黑客帝国数字雨"
 subtitle:   " \"How to Draw The MatrixRain\""
 date:       2018-04-09
 author:     "Tobyyi"
-header-img: "img/post-bg-unix-linux.jpg"
+header-img: "http://img.mp.itc.cn/upload/20160904/97a9d657e0d04cf3aa5078a3793e6524_th.jpeg"
 catalog:    true
 tags:
     - 黑客帝国
