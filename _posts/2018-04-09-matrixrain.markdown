@@ -14,7 +14,7 @@ tags:
 
 # 基于QtQuick的黑客帝国数字雨
 
-![MatrixRain](img/matrix.png)
+![MatrixRain](http://qtddui.test.upcdn.net/qtddui/gitdir/matrix.png)
 
 * 使用Canvas进行数字绘制
 
