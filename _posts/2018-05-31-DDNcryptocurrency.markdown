@@ -46,7 +46,7 @@ tags:
 * QQ: 373955953
 * QQ群:312125701[多多指教Qt/QML社区]
 * github: [@寒山-居士](https://github.com/toby20130333)
-* [DDN区块链浏览器下载地址](http://qtddui.b0.upaiyun.com/qtddui/gitdir/DDN-Client-0.0.0.1.zip)
+* [DDN区块链浏览器下载地址](http://qtddui.b0.upaiyun.com/gitdir/DDN-Client-0.0.0.1.zip)
 
 ## 关于作者
 
