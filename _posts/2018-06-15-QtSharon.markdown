@@ -1,0 +1,124 @@
+---
+layout:     post
+title:      "Qt 技术沙龙 广州站"
+subtitle:   " \"Technical Sharon for Qt\""
+date:       2018-06-15
+author:     "Tobyyi"
+header-img: "https://www.qt.io/hubfs/_website/homepage-heros/hhero_embedded-device-creation.jpg?t=1529015007020"
+catalog:    true
+tags:
+    - 沙龙
+    - Qt
+    - C++
+    - QtQuick
+---
+# 关注Qt 关注互联网
+* Qt社区: [Qt官网](http://qt.io/)
+
+* Meet Qt 技术沙龙 广州站
+
+		2018年6月14日
+		14:20
+
+		1. 多屏应用，多进程式（进程通信）
+		2. 3D应用，尤其是汽车仪表方面
+		3. 合作伙伴，广州虹科
+
+* Qt公司的介绍（Allen）
+
+	会对中国市场投入更多的资源
+
+	Application Development（纯软件）
+	Device Creation（嵌入式行业）汽车，自动化，医疗，工业，
+	消费类电子及物联网：LG，海尔，
+	亚马逊alexsa语音识别（QSpeekx）
+	WebAssembly
+
+* 商业模式：（具有更多的功能模块和商业集成）
+	1. 开发席位授权（licence）
+	2. 分发授权（Device Creation，嵌入式）
+	3. Qt专业服务
+		a. 培训（可定制课程）
+		b. 服务外包（个性化需求）
+		c. 性能优化（如：快速启动）
+
+* 新特性/解决方案/典型案例（于海朋 [图片]haipeng.yu@qt.io）
+	1. 梅萨德思奔驰，
+	需求：1.将汽车上需要操作的部分全部打造成触控式的操作
+	使用到的技术：3D（Qt 3D Studio 建模工具）
+				Amazing Animation（Cover Flow）
+				Multi Screen（多进程通信，在qt5.9之后，封装了进程之间的交互，直接使用Qt Remote Frameware）
+				Web
+				MultiMedia
+				Cluster Style（换肤）
+				
+* 建议多看qt的教程， 在Qt 安装目录的 Example （分类的，比qt creator中更全面）
+
+* 新特性
+	1. 重复利用代码（5.9 -> 5.11向下兼容）
+	2. 功能扩展性
+	3. 可伸缩性（在无GPU的平台上也可以使用）
+	4. 可持续发展
+
+	a. QtQuick Designer（图形化的开发方式，已经集成了动画效果，并且搭建起来非常简单）
+	b. Qt 3D Studio（未来的主线，免费使用，将要发布2.0版本）
+	c. QML Profiler（创建时间，渲染时间）
+	d. Gamma Ray（分析qt底层的运行机制，哪个指针创建的，由谁创建的）
+	e. Qt Wayland （嵌入式设备多分屏，实现多窗口）
+	f. Fast Boot（Qt Lite 分析qt源码中有哪些模块，对应哪些功能，进行选择）
+	g. QML Live（无需重新编译，改了代码之后直接可以查看效果）
+	h. Static Link（静态编译）
+	i. Qt Quick Scene Graph（批次渲染）
+	j. Qt Quick Compiler（快速编译器，商业版，省去QML解析阶段，节省20-30%时间）
+	k. Boot to Qt（快速部署于目标设备）
+	l. Qt Web Engine（打通了H5和C++的桥梁）
+	m. Qt Virtual KeyBoard（虚拟键盘，支持26国语言，手写输入，语音，换肤）
+
+* Qt 3D Studio （未来的一个趋势）
+	1. 合成工具，并不是3D建模工具
+	2. 做动画效果（类似于flash）
+	3. 有接口，可以对动画进行控制
+
+* Fast Boot
+
+背景：汽车制造商（法规：2秒内启动，电源管理系统）
+前期准备：a.了解硬件能力及限制（从SSD启动还是从SD卡启动）
+		b.清楚快速启动的需求（app内有很多东西，哪些起来才算起来，标准是什么）
+		c.熟悉操作系统（操作系统优化 Linux是开源的，可以进行裁剪优化，uboot如何裁剪，service如何进行优化；app优化）
+优化流程：
+	1. 评估，制作一个demo，在开发板上的极限启动时间是多少；
+	2. 分析，分析出项目由哪几块组成，每个模块如何去优化；
+	3. 优化（Uboot，Kernel，App）商业化板中可以将图片的加载时间从200ms降低到30us左右
+
+User space（将app放在前面启动，其他的service放后面）
+
+* app优化：
+	1. QML Profiler（字体加载很慢，所有的gui框架都是如此）
+	2. Gamma Ray（帮助了解原理，然后来优化）
+	3. Qt库的优化
+	4. 静态链接（性能比动态链接的性能更好，无需寻找与加载动态库）
+
+	qt正在对云数据做进行布局
+	Vulkun 跨平台，且比 OpenGL 更先进
+	
+	
+* 以上内容均由[药师](445908989)提供
+* 邮件(373955953@qq.com)
+* QQ: 373955953
+* QQ群:312125701[多多指教Qt/QML社区]
+* github: [@寒山-居士](https://github.com/toby20130333)
+* [DDN区块链浏览器下载地址](http://qtddui.b0.upaiyun.com/gitdir/DDN-Client-0.0.0.1.zip)
+
+## 关于作者
+
+```
+  var duoduozhijiao = {
+    nickName  : "寒山-居士",
+    site : "http://www.heilqt.com",
+    blog : "http://blog.heilqt.com"
+  }
+
+```
+
+
+	
