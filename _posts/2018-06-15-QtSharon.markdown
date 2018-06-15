@@ -60,19 +60,19 @@ tags:
 	3. 可伸缩性（在无GPU的平台上也可以使用）
 	4. 可持续发展
 
-	a. QtQuick Designer（图形化的开发方式，已经集成了动画效果，并且搭建起来非常简单）
-	b. Qt 3D Studio（未来的主线，免费使用，将要发布2.0版本）
-	c. QML Profiler（创建时间，渲染时间）
-	d. Gamma Ray（分析qt底层的运行机制，哪个指针创建的，由谁创建的）
-	e. Qt Wayland （嵌入式设备多分屏，实现多窗口）
-	f. Fast Boot（Qt Lite 分析qt源码中有哪些模块，对应哪些功能，进行选择）
-	g. QML Live（无需重新编译，改了代码之后直接可以查看效果）
-	h. Static Link（静态编译）
-	i. Qt Quick Scene Graph（批次渲染）
-	j. Qt Quick Compiler（快速编译器，商业版，省去QML解析阶段，节省20-30%时间）
-	k. Boot to Qt（快速部署于目标设备）
-	l. Qt Web Engine（打通了H5和C++的桥梁）
-	m. Qt Virtual KeyBoard（虚拟键盘，支持26国语言，手写输入，语音，换肤）
+			a. QtQuick Designer（图形化的开发方式，已经集成了动画效果，并且搭建起来非常简单）
+			b. Qt 3D Studio（未来的主线，免费使用，将要发布2.0版本）
+			c. QML Profiler（创建时间，渲染时间）
+			d. Gamma Ray（分析qt底层的运行机制，哪个指针创建的，由谁创建的）
+			e. Qt Wayland （嵌入式设备多分屏，实现多窗口）
+			f. Fast Boot（Qt Lite 分析qt源码中有哪些模块，对应哪些功能，进行选择）
+			g. QML Live（无需重新编译，改了代码之后直接可以查看效果）
+			h. Static Link（静态编译）
+			i. Qt Quick Scene Graph（批次渲染）
+			j. Qt Quick Compiler（快速编译器，商业版，省去QML解析阶段，节省20-30%时间）
+			k. Boot to Qt（快速部署于目标设备）
+			l. Qt Web Engine（打通了H5和C++的桥梁）
+			m. Qt Virtual KeyBoard（虚拟键盘，支持26国语言，手写输入，语音，换肤）
 
 * Qt 3D Studio （未来的一个趋势）
 	1. 合成工具，并不是3D建模工具
