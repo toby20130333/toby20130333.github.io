@@ -4,7 +4,7 @@ title:      "基于QtQuick的C++,qml,Html三者的Bridge交互"
 subtitle:   " \"A Bridge between QML and Html\""
 date:       2018-08-01
 author:     "Tobyyi"
-header-img: "http://qtddui.b0.upaiyun.com/gitdir/bridge.png"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/bg2.png"
 catalog:    true
 tags:
     - JavaScript
