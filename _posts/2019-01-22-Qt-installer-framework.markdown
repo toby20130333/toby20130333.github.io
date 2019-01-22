@@ -4,7 +4,7 @@ title:      "Qt-installer-framework说明大全系列"
 subtitle:   " \"A Qt-installer-framework For Qt Application\""
 date:       2019-01-22
 author:     "Tobyyi"
-header-img: "http://qtddui.b0.upaiyun.com/blog/ifw.png"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/qtcn/ddn/home2.png"
 catalog:    true
 tags:
     - Deploy
