@@ -4,12 +4,12 @@ title:      "Qt-installer-framework说明大全系列"
 subtitle:   " \"A Qt-installer-framework For Qt Application\""
 date:       2019-01-22
 author:     "Tobyyi"
-header-img: "http://qtddui.b0.upaiyun.com/gitdir/bg2.png"
+header-img: "http://qtddui.b0.upaiyun.com/blog/ifw.png"
 catalog:    true
 tags:
     - Deploy
-    - C++
-    - QtQuick
+    - Installer
+    - Qt
 ---
 
 ## Qt安装程序框架概述
@@ -73,16 +73,19 @@ Qt安装程序框架工具使用一组页面生成安装程序，这些页面在
   都是最小化静态编译Qt源码 方便构建静态的Qt installer framework的框架
 
   1. 配置Qt for Windows (最小化静态编译Qt源码)
+   
    ```
     configure -prefix %CD%\qtbase -release -static -static-runtime -target xp -accessibility -no-opengl -no-icu -no-sql-sqlite -no-qml-debug -nomake examples -nomake tests -skip qtactiveqt -skip qtenginio -skip qtlocation -skip qtmultimedia -skip qtserialport -skip qtquick1 -skip qtquickcontrols -skip qtscript -skip qtsensors -skip qtwebkit -skip qtwebsockets -skip qtxmlpatterns -skip qt3d
 
    ```
   2. 配置Qt for Linux 
+   
    ```
    configure -prefix $PWD/qtbase -release -static -accessibility -qt-zlib -qt-libpng -qt-libjpeg -qt-xcb -qt-pcre -qt-freetype -no-glib -no-cups -no-sql-sqlite -no-qml-debug -no-opengl -no-egl -no-xinput -no-xinput2 -no-sm -no-icu -nomake examples -nomake tests -skip qtactiveqt -skip qtenginio -skip qtlocation -skip qtmultimedia -skip qtserialport -skip qtquick1 -skip qtquickcontrols -skip qtscript -skip qtsensors -skip qtwebkit -skip qtwebsockets -skip qtxmlpatterns -skip qt3d
  
    ```
   3. 配置Qt for Macos
+   
    ```
     configure -prefix $PWD/qtbase -release -static -accessibility -qt-zlib -qt-libpng -qt-libjpeg -no-cups -no-sql-sqlite -no-qml-debug -nomake examples -nomake tests -skip qtactiveqt -skip qtenginio -skip qtlocation -skip qtmultimedia -skip qtserialport -skip qtquick1 -skip qtquickcontrols -skip qtscript -skip qtsensors -skip qtwebkit -skip qtwebsockets -skip qtxmlpatterns -skip qt3d
  
