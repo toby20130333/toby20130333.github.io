@@ -114,6 +114,25 @@ Mac OSX平台
 ```
 使用它基本可以解决无第三方库的项目，查阅项目发布mac osx信息 可以参考Qt帮助文档 Deploying an Application on Mac OS X这一章节
      
+辅助工具：otool 查看依赖 install_name_tool修改依赖
+举个栗子：
+```
+install_name_tool -change "libcore.0.dylib" "@rpath/libcore.0.dylib" ./yourapp.app/Contents/MacOS/yourapp
+表示yourapp依赖第三方库core.dylib 需要将core的依赖路径有当前core.dylib修改为rpath/core.dylib
+```
+
+```
+install_name_tool -change "libcore.0.dylib" "@rpath/libcore.0.dylib" ./yourapp.app/Contents/libs/libother3rdlib.1.dylib
+```
+表示other3rdlib依赖的core.dylib 需要将core的依赖路径有当前core.dylib修改为rpath/core.dylib
+其他库 也是如此
+可以将他们写成一个sh脚本 批量执行
+
+最后还可以添加一个rpath的组 rpath可以包含多个组的路径
+
+```
+install_name_tool -add_rpath @rpath/../Frameworks .yourapp.app/Contents/MacOs/yourapp
+```
  三、类UNIX系统(linux)
      
   linux系统 多种多样，主要还是参考Qt帮助文档 Deploying an Application on X11 Platforms 
