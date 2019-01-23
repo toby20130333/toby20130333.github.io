@@ -4,7 +4,7 @@ title:      "基于socket.io 0.9.x的客户端的Qt API的封装"
 subtitle:   " \"QtQuick for IM\""
 date:       2017-02-22
 author:     "Tobyyi"
-header-img: "http://qtclub.qiniudn.com/timg.jpeg"
+header-img: "http://qiniu.heilqt.com/timg.jpeg"
 tags:
     - QtQuick
     - socket.io
@@ -68,9 +68,9 @@ tags:
 ```
 ## 使用效果
 
-![tup1](http://qtclub.qiniudn.com/chat.png)
+![tup1](http://qiniu.heilqt.com/chat.png)
 
-![图片](http://qtclub.qiniudn.com/Fvr3AObd8A8op-3hYXyxjL36zaQ3)
+![图片](http://qiniu.heilqt.com/Fvr3AObd8A8op-3hYXyxjL36zaQ3)
 
 ## 有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流

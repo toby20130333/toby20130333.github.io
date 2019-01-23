@@ -4,7 +4,7 @@ title:      "基于QtQuick和C++的深度交互方式之二"
 subtitle:   " \"QtQuick与C++交互-2\""
 date:       2017-03-10
 author:     "Tobyyi"
-header-img: "http://qtclub.qiniudn.com/quickplus2.jpg"
+header-img: "http://qiniu.heilqt.com/quickplus2.jpg"
 tags:
     - QtQuick
     - C++

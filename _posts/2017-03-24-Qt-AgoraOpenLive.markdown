@@ -4,7 +4,7 @@ title:      "基于Qt封装声网平台直播API简析"
 subtitle:   " \"基于Qt框架的直播API简析\""
 date:       2017-03-24
 author:     "Tobyyi"
-header-img: "http://qtclub.qiniudn.com/acb8f1b840a28e0157f27d66a5f54122.jpg"
+header-img: "http://qiniu.heilqt.com/acb8f1b840a28e0157f27d66a5f54122.jpg"
 tags:
     - Qt
     - C++

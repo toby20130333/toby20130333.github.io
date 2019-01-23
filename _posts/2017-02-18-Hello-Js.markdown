@@ -4,7 +4,7 @@ title:      "欢迎来到多多指教的世界"
 subtitle:   " \"Hello Qt, Hello Blog\""
 date:       2017-02-18
 author:     "Tobyyi"
-header-img: "http://qtclub.qiniudn.com/house.jpeg"
+header-img: "http://qiniu.heilqt.com/house.jpeg"
 tags:
     - 生活
     - 情怀
