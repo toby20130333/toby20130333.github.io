@@ -4,7 +4,7 @@ title:      "QIFW说明大全系列-安装界面"
 subtitle:   " \"A QIFW For Installer\""
 date:       2019-01-23
 author:     "Tobyyi"
-header-img: "http://qtddui.b0.upaiyun.com/gitdir/qtcn/ddn/home2.png"
+header-img: "http://qtddui.b0.upaiyun.com/gitdir/blog/upyun/bg.png"
 catalog:    true
 tags:
     - Deploy
