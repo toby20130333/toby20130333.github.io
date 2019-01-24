@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Qt-installer-framework说明大全系列"
+title:      "QIFW说明大全系列-初次窥探"
 subtitle:   " \"A Qt-installer-framework For Qt Application\""
 date:       2019-01-22
 author:     "Tobyyi"
