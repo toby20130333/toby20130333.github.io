@@ -77,6 +77,14 @@ repogen.exe -p <package_directory> <repository_directory>
 * 即使组件是从web服务器获取的，binarycreator默认情况下也会将它们添加到安装程序二进制文件中。但是，当安装程序检查web服务器是否有更新时，如果没有新版本，终端用户就不必下载。
 或者，您可以创建不包含任何数据并从web服务器获取所有数据的在线安装程序。使用binarycreator工具的-n参数，只将根组件添加到安装程序中。通常根组件是空的，因此只添加根的XML描述。
 
+
+### 图解说明
+
+1. 安装包目录结构
+![installer](http://qtddui.b0.upaiyun.com/gitdir/blog/upyun/online.png)
+
+2. 更新包的目录结构
+![updater](http://qtddui.b0.upaiyun.com/gitdir/blog/upyun/updater.png)
 ## 有问题反馈
 
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
